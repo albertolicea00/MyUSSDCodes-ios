@@ -11,7 +11,7 @@ iOS app to browse, organize and run USSD codes. Built with Swift and SwiftUI.
 >
 > | What | Repository |
 > | ---- | ---------- |
-> | 📋 Code catalog (collections) | [MyUSSDCodes-collection](https://github.com/albertolicea00/my-ussd-cod-es-collection) |
+> | 📋 Code catalog (collections) | [MyUSSDCodes-collection](https://github.com/albertolicea00/MyUSSDCodes-collection) |
 > | 📱 Android app | [MyUSSDCodes-apk](https://github.com/albertolicea00/MyUSSDCodes-apk) |
 
 ## ✨ Features
