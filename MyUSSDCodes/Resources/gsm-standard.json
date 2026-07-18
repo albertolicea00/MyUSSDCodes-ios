@@ -1,0 +1,282 @@
+{
+  "$schema": "../schema/collection.schema.json",
+  "id": "gsm-standard",
+  "name": "GSM Standard Codes",
+  "description": "Carrier-independent MMI/USSD codes defined by the GSM standard. They work on most GSM networks worldwide, although some carriers disable a few of them.",
+  "version": 1,
+  "language": "en",
+  "codes": [
+    {
+      "id": "gsm-show-imei",
+      "name": "Show IMEI",
+      "description": "Displays the device IMEI number(s). Useful for warranty, blocking a stolen phone or carrier support.",
+      "code": "*#06#",
+      "category": "Device",
+      "tags": ["imei", "device", "identity"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-always-enable",
+      "name": "Forward all calls",
+      "description": "Registers and activates unconditional call forwarding to the given number.",
+      "code": "**21*{number}#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "unconditional"],
+      "variables": [
+        { "key": "number", "label": "Forward to number", "type": "phone", "hint": "+15551234567" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-always-disable",
+      "name": "Stop forwarding all calls",
+      "description": "Deactivates and erases unconditional call forwarding.",
+      "code": "##21#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "disable"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-always-status",
+      "name": "Forward-all status",
+      "description": "Checks whether unconditional call forwarding is active.",
+      "code": "*#21#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-no-answer-enable",
+      "name": "Forward when unanswered",
+      "description": "Forwards calls to the given number when you do not answer.",
+      "code": "**61*{number}#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "no-answer"],
+      "variables": [
+        { "key": "number", "label": "Forward to number", "type": "phone", "hint": "+15551234567" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-no-answer-disable",
+      "name": "Stop forwarding when unanswered",
+      "description": "Deactivates and erases forwarding for unanswered calls.",
+      "code": "##61#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "no-answer", "disable"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-no-answer-status",
+      "name": "Forward-when-unanswered status",
+      "description": "Checks whether forwarding for unanswered calls is active.",
+      "code": "*#61#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "no-answer", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-unreachable-enable",
+      "name": "Forward when unreachable",
+      "description": "Forwards calls to the given number when the phone is off or out of coverage.",
+      "code": "**62*{number}#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "unreachable"],
+      "variables": [
+        { "key": "number", "label": "Forward to number", "type": "phone", "hint": "+15551234567" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-unreachable-disable",
+      "name": "Stop forwarding when unreachable",
+      "description": "Deactivates and erases forwarding for unreachable states.",
+      "code": "##62#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "unreachable", "disable"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-unreachable-status",
+      "name": "Forward-when-unreachable status",
+      "description": "Checks whether forwarding for unreachable states is active.",
+      "code": "*#62#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "unreachable", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-busy-enable",
+      "name": "Forward when busy",
+      "description": "Forwards calls to the given number when the line is busy.",
+      "code": "**67*{number}#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "busy"],
+      "variables": [
+        { "key": "number", "label": "Forward to number", "type": "phone", "hint": "+15551234567" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-busy-disable",
+      "name": "Stop forwarding when busy",
+      "description": "Deactivates and erases forwarding for busy-line calls.",
+      "code": "##67#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "busy", "disable"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-busy-status",
+      "name": "Forward-when-busy status",
+      "description": "Checks whether forwarding for busy-line calls is active.",
+      "code": "*#67#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "busy", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cf-cancel-all",
+      "name": "Cancel all forwarding",
+      "description": "Deactivates and erases every call forwarding rule at once.",
+      "code": "##002#",
+      "category": "Call forwarding",
+      "tags": ["forwarding", "divert", "reset"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cw-enable",
+      "name": "Enable call waiting",
+      "description": "Activates call waiting so a second incoming call beeps during a call.",
+      "code": "*43#",
+      "category": "Call waiting",
+      "tags": ["waiting", "second-call"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cw-disable",
+      "name": "Disable call waiting",
+      "description": "Deactivates call waiting.",
+      "code": "#43#",
+      "category": "Call waiting",
+      "tags": ["waiting", "second-call", "disable"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "cw-status",
+      "name": "Call waiting status",
+      "description": "Checks whether call waiting is active.",
+      "code": "*#43#",
+      "category": "Call waiting",
+      "tags": ["waiting", "second-call", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "clir-hide-once",
+      "name": "Hide caller ID for one call",
+      "description": "Calls the given number hiding your caller ID for that single call.",
+      "code": "#31#{number}",
+      "category": "Caller ID",
+      "tags": ["caller-id", "privacy", "clir"],
+      "variables": [
+        { "key": "number", "label": "Number to call", "type": "phone", "hint": "+15551234567" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "clir-show-once",
+      "name": "Show caller ID for one call",
+      "description": "Calls the given number forcing your caller ID to be visible for that single call.",
+      "code": "*31#{number}",
+      "category": "Caller ID",
+      "tags": ["caller-id", "clir"],
+      "variables": [
+        { "key": "number", "label": "Number to call", "type": "phone", "hint": "+15551234567" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "clir-status",
+      "name": "Caller ID sending status",
+      "description": "Checks whether your caller ID is sent on outgoing calls (CLIR).",
+      "code": "*#31#",
+      "category": "Caller ID",
+      "tags": ["caller-id", "clir", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "clip-status",
+      "name": "Incoming caller ID status",
+      "description": "Checks whether incoming caller ID display is enabled (CLIP).",
+      "code": "*#30#",
+      "category": "Caller ID",
+      "tags": ["caller-id", "clip", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "sim-change-pin",
+      "name": "Change SIM PIN",
+      "description": "Changes the SIM card PIN from the dialer.",
+      "code": "**04*{oldPin}*{newPin}*{newPin}#",
+      "category": "SIM security",
+      "tags": ["sim", "pin", "security"],
+      "variables": [
+        { "key": "oldPin", "label": "Current PIN", "type": "number", "hint": "1234" },
+        { "key": "newPin", "label": "New PIN", "type": "number", "hint": "4321" }
+      ],
+      "dangerous": true,
+      "notes": "Three wrong PIN attempts lock the SIM and require the PUK to unlock it.",
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "sim-unblock-pin",
+      "name": "Unblock SIM with PUK",
+      "description": "Unblocks a PIN-locked SIM using the PUK and sets a new PIN.",
+      "code": "**05*{puk}*{newPin}*{newPin}#",
+      "category": "SIM security",
+      "tags": ["sim", "puk", "pin", "security"],
+      "variables": [
+        { "key": "puk", "label": "PUK code", "type": "number" },
+        { "key": "newPin", "label": "New PIN", "type": "number", "hint": "4321" }
+      ],
+      "dangerous": true,
+      "notes": "Ten wrong PUK attempts permanently disable the SIM card.",
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "bar-outgoing-enable",
+      "name": "Bar outgoing calls",
+      "description": "Blocks all outgoing calls using the carrier barring password.",
+      "code": "*33*{password}#",
+      "category": "Call barring",
+      "tags": ["barring", "outgoing", "block"],
+      "variables": [
+        { "key": "password", "label": "Barring password", "type": "number", "hint": "Usually 0000 or 1234" }
+      ],
+      "dangerous": true,
+      "notes": "You will not be able to place calls until barring is removed. The password is set by your carrier.",
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "bar-outgoing-disable",
+      "name": "Remove outgoing call barring",
+      "description": "Removes the outgoing call barring using the carrier barring password.",
+      "code": "#33*{password}#",
+      "category": "Call barring",
+      "tags": ["barring", "outgoing", "unblock"],
+      "variables": [
+        { "key": "password", "label": "Barring password", "type": "number", "hint": "Usually 0000 or 1234" }
+      ],
+      "source": "GSM standard (ETSI TS 122 030)"
+    },
+    {
+      "id": "bar-outgoing-status",
+      "name": "Outgoing call barring status",
+      "description": "Checks whether outgoing calls are barred.",
+      "code": "*#33#",
+      "category": "Call barring",
+      "tags": ["barring", "outgoing", "status"],
+      "source": "GSM standard (ETSI TS 122 030)"
+    }
+  ]
+}
