@@ -1,12 +1,12 @@
-# Contributing to My USSD Codes — iOS
+# Contributing to My USSD Codes [iPhone]
 
 Thanks for your interest! Contributions of all sizes are welcome.
 
 ## Where things go
 
 - **App bugs and features** → this repository.
-- **New USSD codes / collections** → the [catalog repository](https://github.com/albertolicea00/my-ussd-codes). The app only bundles a seed copy of the GSM standard collection.
-- **Android work** → [my-ussd-codes-apk](https://github.com/albertolicea00/my-ussd-codes-apk).
+- **New USSD codes / collections** → the [catalog repository](https://github.com/albertolicea00/MyUSSDCodes-collection). The app only bundles a seed copy of the GSM standard collection.
+- **Android work** → [MyUSSDCodes-apk](https://github.com/albertolicea00/MyUSSDCodes-apk).
 
 ## Getting started
 
