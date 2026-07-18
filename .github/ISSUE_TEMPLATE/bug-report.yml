@@ -1,0 +1,39 @@
+name: Bug report
+description: Something in the iOS app is broken.
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Clear description of the bug and steps to reproduce it.
+      placeholder: |
+        1. Open Sections
+        2. Tap on…
+        3. The app…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device & iOS version
+      placeholder: iPhone 15, iOS 18.1
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      placeholder: 1.0.0
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Attach console output or screenshots if available.
