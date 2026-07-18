@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability, please open an issue on the [catalog repository](https://github.com/albertolicea00/my-ussd-codes/issues) or email me directly. I'll respond within 48 hours.
+If you discover a security vulnerability, please open an issue on the [catalog repository](https://github.com/albertolicea00/MyUSSDCodes/issues) or email me directly. I'll respond within 48 hours.
 
 Do not open public issues for critical vulnerabilities — use email instead.
 

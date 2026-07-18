@@ -1,7 +1,7 @@
 import SwiftUI
 
 private let catalogRawURL =
-    "https://raw.githubusercontent.com/albertolicea00/my-ussd-codes/main/codes/gsm-standard.json"
+    "https://raw.githubusercontent.com/albertolicea00/MyUSSDCodes-collection/main/codes/gsm-standard.json"
 
 /// Third tab: import, data management and app info.
 struct SettingsView: View {
@@ -54,13 +54,13 @@ struct SettingsView: View {
 
                 Section("About") {
                     LabeledContent("Version", value: appVersion)
-                    Link(destination: URL(string: "https://github.com/albertolicea00/my-ussd-codes")!) {
+                    Link(destination: URL(string: "https://github.com/albertolicea00/MyUSSDCodes-collection")!) {
                         Label("Code catalog", systemImage: "books.vertical")
                     }
-                    Link(destination: URL(string: "https://github.com/albertolicea00/my-ussd-codes-ios")!) {
+                    Link(destination: URL(string: "https://github.com/albertolicea00/MyUSSDCodes-ios")!) {
                         Label("iOS app source", systemImage: "apple.logo")
                     }
-                    Link(destination: URL(string: "https://github.com/albertolicea00/my-ussd-codes-apk")!) {
+                    Link(destination: URL(string: "https://github.com/albertolicea00/MyUSSDCodes-apk")!) {
                         Label("Android app source", systemImage: "smartphone")
                     }
                     LabeledContent("License", value: "MIT © 2026 Alberto Licea")
