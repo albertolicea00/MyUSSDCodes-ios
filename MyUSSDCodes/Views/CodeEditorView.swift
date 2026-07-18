@@ -110,7 +110,7 @@ struct CodeEditorView: View {
     }
 
     private func syncVariablesWithCode() {
-        let used = dialCode.matches(of: /\{([a-zA-Z][a-zA-Z0-9]*)\}/).map { String($0.1) }
+        let used = dialCode.matches(of: #/\{([a-zA-Z][a-zA-Z0-9]*)\}/#).map { String($0.1) }
         variables.removeAll { !used.contains($0.key) }
         for key in used where !variables.contains(where: { $0.key == key }) {
             variables.append(CodeVariable(key: key, label: key))
@@ -131,7 +131,7 @@ struct CodeEditorView: View {
             error = "Code is required."
             return
         }
-        if trimmedCode.wholeMatch(of: /([*#+0-9]|\{[a-zA-Z][a-zA-Z0-9]*\})+/) == nil {
+        if trimmedCode.wholeMatch(of: #/([*#+0-9]|\{[a-zA-Z][a-zA-Z0-9]*\})+/#) == nil {
             error = "Code may only contain *, #, +, digits and {placeholders}."
             return
         }
