@@ -6,7 +6,7 @@ Guidance for AI assistants (Claude Code) working in this repository.
 
 The **iOS app** of My USSD Codes: browse, organize and run USSD codes. Swift 5 + SwiftUI, iOS 17+, no third-party dependencies, Xcode 16 project (`objectVersion 77`, file-system-synchronized groups — files added on disk under `MyUSSDCodes/` join the target automatically).
 
-**This is NOT a monorepo.** The catalog data lives in [my-ussd-codes](https://github.com/albertolicea00/my-ussd-codes) and the Android app in [my-ussd-codes-apk](https://github.com/albertolicea00/my-ussd-codes-apk) — separate repositories. Never add USSD code data here beyond the bundled seed resource.
+**This is NOT a monorepo.** The catalog data lives in [MyUSSDCodes-collections](https://github.com/albertolicea00/MyUSSDCodes-collections) and the Android app in [MyUSSDCodes-apk](https://github.com/albertolicea00/MyUSSDCodes-apk) — separate repositories. Never add USSD code data here beyond the bundled seed resource.
 
 ## Architecture
 
